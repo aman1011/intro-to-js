@@ -49,3 +49,36 @@ h2 {
     color: lightsalmon;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    justify-content: flex-start;
+}
+
+.grid-row {
+    display: flex;
+    margin-bottom: 10px; /* Adjust the space between rows */
+}
+
+.grid-item-left {
+    flex: 0 0 calc(20% - 10px); /* Adjust the width of each column and space between columns */
+    margin-right: 10px; /* Adjust the space between columns */
+    overflow: hidden;
+    margin-right: 50%;
+}
+
+.grid-item-right {
+    flex: 0 0 calc(20% - 10px); /* Adjust the width of each column and space between columns */
+    margin-right: 10px; /* Adjust the space between columns */
+    overflow: hidden;
+    margin-left: 50%;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}

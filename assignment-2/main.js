@@ -86,7 +86,7 @@ document.write("<p id='below'></p>")
 document.getElementById("above").innerHTML = abovetext;
 document.getElementById("below").innerHTML = belowtext;
 console.log(sum / Object.keys(f1Points).length);
-document.write("</section>")
+document.write("</section>");
 
 
 
