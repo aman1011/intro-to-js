@@ -7,17 +7,39 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
+        <script src="main.js"></script>
         <img src="header.jpg" width="1900" height="350">
         <p>Harry Potter API</p>
-    </body>
-    <section>
-        <div class="grid-container">
-            <div class="image-grid">
-                <img src="gryffindor.png" width="200" height="350" class="grid-item">
-                <img src="slytherin.png" width="200" height="300" class="grid-item">
-                <img src="hufflepuff.png" width="200" height="300" class="grid-item">
-                <img src="ravenclaw.png" width="200" height="300" class="grid-item">
+        <section>
+            <div class="grid-container">
+                <div class="image-grid">
+                    <div>
+                        <img src="gryffindor.png" width="200" height="350" class="grid-item">
+                        <div class="grid-button">
+                            <button id="gryffindor" "margin-left: 30%;">Click</button>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="slytherin.PNG" width="200" height="350" class="grid-item">
+                        <div class="grid-button">
+                            <button id="slytherin" style="margin-left: 30%;">Click</button>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="hufflepuff.png" width="200" height="350" class="grid-item">
+                        <div class="grid-button">
+                            <button id="hupplepuff"style="margin-left: 30%;">Click</button>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="ravenclaw.png" width="200" height="350" class="grid-item">
+                        <div class="grid-button">
+                            <button id="ravenclaw" style="margin-left: 30%;">Click</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+            <div id="dataContainer" class="data-container"></div>
+        </section>
+    </body>
 </html>

@@ -74,26 +74,6 @@ background: linear-gradient(90deg, rgba(221,128,114,1) 0%, rgba(52,11,38,1) 50%,
     margin-bottom: 10px; 
 }
 
-.grid-item-left {
-    flex: 0 0 calc(20% - 10px); 
-    margin-right: 10px;
-    overflow: hidden;
-    margin-right: 50%;
-}
-
-.grid-item-right {
-    flex: 0 0 calc(20% - 10px); 
-    margin-right: 10px;
-    overflow: hidden;
-    margin-left: 50%;
-}
-
-.grid-item img {
-    width: 100%;
-    height: 100%;
-    display: block;
-}
-
 .image-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -103,7 +83,7 @@ background: linear-gradient(90deg, rgba(221,128,114,1) 0%, rgba(52,11,38,1) 50%,
   
 .grid-item {
     width: 100%;
-    height: 100%;
+    height: 90%;
     display: block;
 }
 
@@ -152,3 +132,11 @@ background: linear-gradient(90deg, rgba(221,128,114,1) 0%, rgba(52,11,38,1) 50%,
     font-color: white;
   }
   
+.grid-button {
+    padding: 10px 20px; /* Adjust the values based on your preferred padding */
+    background-color: white /* Green background color */
+    color: white; /* White text color */
+    border: none; /* Remove default button border */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    cursor: pointer;
+}
