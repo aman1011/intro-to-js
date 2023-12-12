@@ -2,14 +2,14 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, inital-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>About Me</title>
         <link rel="stylesheet" href="main.css">
     </head>
     <body>
         <h2>Aman Gaur</h2>
-        <img src="profile.jpg" width="200" height="200" class="center"></img>
-        <!--<script src="main.js"></script>-->
+        <img src="static/profile.jpg" width="200" height="200" class="center"></img>
+        <script src="grid-view.js"></script>
         <section id="education">
             <h3>Education</h3>
             <p>
@@ -17,6 +17,17 @@
                 <li>Udacity - Full Stack Nanodegree</li>
                 <li>Nova Scotia Community College - IT Programming - IoT</li>
             </p>
+        </section>
+
+        <div class="button-container">
+            <button class="button1">Hover for animation #1</button>
+            <button class="button2"> Hover for animation #2</button>
+        </div>
+
+        <section id="video">
+            <video width="1600" height="400" controls autoplay loop muted>
+                <source src="static/f1.mp4" type="video/mp4">
+            </video>
         </section>
         <section id="hobbies">
             <h3>Hobbies</h3>
@@ -27,45 +38,56 @@
                         <div class="flip-container">
                             <div class="flipper">
                                 <div class="front">
-                                    <img src="f1.jpg" width="279" height="147" alt="Flippable Image">
+                                    <img src="static/f1.jpg" width="279" height="147" alt="Flippable Image">
                                 </div>
                                 <div class="back">
-                                    <img src="cricket.jpg" width="279" height="147" alt="unFlippable Image">
+                                    <img src="static/cricket.jpg" width="279" height="147" alt="unFlippable Image">
                                 </div>
                             </div>
                         </div>
-                        <img src="soccer.jpg" width="279" height="147" class="grid-item">
-                        <img src="cricket.jpg" width="279" height="147" class="grid-item">
-                        <img src="rydene.jpg" width="279" height="147" class="grid-item">
+                        <img src="static/soccer.jpg" width="279" height="147" class="grid-item">
+                        <img src="static/cricket.jpg" width="279" height="147" class="grid-item">
+                        <img src="static/rydene.jpg" width="279" height="147" class="grid-item">
                     </div>
                 </div>
             </p>
         </section>
+        <div>
+            <img id="myImage" src="static/f1.jpg" width="200" height="150" class="original-image" onclick="changeImageClass()">
+        </div>
         <section id="formula"> 
             <h3>F1 2023 Analysis</h3>
                 <section id="inner-grid">
                     <p>Default grid position of drivers</p>
                     <div class="grid-container">
-                        <div class="grid-item-left"><img src="max.jpg" width="250" height="100"></div>
-                        <div class="grid-item-right"><img src="perez.jpg" width="250" height="100"></div>
-                        <div class="grid-item-left"><img src="lec.jpg" width="250" height="100"></div>
-                        <div class="grid-item-right"><img src="sainz.jpg" width="250" height="100"></div>
-                        <div class="grid-item-left"><img src="lando.jpg" width="250" height="100"></div>
-                        <div class="grid-item-right"><img src="oscar.jpg" width="250" height="100"></div>
-                        <div class="grid-item-left"><img src="alonso.jpg" width="250" height="100"></div>
-                        <div class="grid-item-right"><img src="lan.jpg" width="250" height="100"></div>
-                        <div class="grid-item-left"><img src="ocon.jpg" width="250" height="100"></div>
-                        <div class="grid-item-right"><img src="gasly.jpg" width="250" height="100"></div>
-                        <div class="grid-item-left"><img src="mag.jpg" width="250" height="100"></div>
-                        <div class="grid-item-right"><img src="hulk.jpg" width="250" height="100"></div>
-                        <div class="grid-item-left"><img src="yuki.jpg" width="250" height="100"></div>
-                        <div class="grid-item-right"><img src="ric.jpg" width="250" height="100"></div>
-                        <div class="grid-item-left"><img src="bottas.jpg" width="250" height="100"></div>
-                        <div class="grid-item-right"><img src="zhou.jpg" width="250" height="100"></div>
-                        <div class="grid-item-left"><img src="alb.jpg" width="250" height="100"></div>
-                        <div class="grid-item-right"><img src="log.jpg" width="250" height="100"></div>
+                        <div class="grid-item-left"><img src="static/max.jpg" width="250" height="100"></div>
+                        <div class="grid-item-right"><img src="static/perez.jpg" width="250" height="100"></div>
+                        <div class="grid-item-left"><img src="static/lec.jpg" width="250" height="100"></div>
+                        <div class="grid-item-right"><img src="static/sainz.jpg" width="250" height="100"></div>
+                        <div class="grid-item-left"><img src="static/lando.jpg" width="250" height="100"></div>
+                        <div class="grid-item-right"><img src="static/oscar.jpg" width="250" height="100"></div>
+                        <div class="grid-item-left"><img src="static/alonso.jpg" width="250" height="100"></div>
+                        <div class="grid-item-right"><img src="static/lan.jpg" width="250" height="100"></div>
+                        <div class="grid-item-left"><img src="static/ocon.jpg" width="250" height="100"></div>
+                        <div class="grid-item-right"><img src="static/gasly.jpg" width="250" height="100"></div>
+                        <div class="grid-item-left"><img src="static/mag.jpg" width="250" height="100"></div>
+                        <div class="grid-item-right"><img src="static/hulk.jpg" width="250" height="100"></div>
+                        <div class="grid-item-left"><img src="static/yuki.jpg" width="250" height="100"></div>
+                        <div class="grid-item-right"><img src="static/ric.jpg" width="250" height="100"></div>
+                        <div class="grid-item-left"><img src="static/bottas.jpg" width="250" height="100"></div>
+                        <div class="grid-item-right"><img src="static/zhou.jpg" width="250" height="100"></div>
+                        <div class="grid-item-left"><img src="static/alb.jpg" width="250" height="100"></div>
+                        <div class="grid-item-right"><img src="static/log.jpg" width="250" height="100"></div>
                     </div>
                 </section>
+        </section>
+
+        <div class="button-container">
+            <button class="button2" onclick="displayGrid()">Press for the 2023 final standings grid view/button>
+        </div>
+
+        <section id="newFormula">
+
         </section>
     </body>
 </html>
