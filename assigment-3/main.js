@@ -18,9 +18,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 let innerHTML = '';
 
                 slicedArray.forEach(element => {
-                    
+
                     innerHTML += "<div>" +
-                        "<img src='" + element.image + "' width='70' height='200' class='grid-item'>" +
+                        "<img src='" + element.image + "' width='70' height='200'" + "class='grid-item'>" +
                         "<p id='info'>" + element.name + "</p>" +
                         "<p id='info'> Wand :-" + element.wand['length'] + '" ' + element.wand['wood'] + element.wand['core'] + "</p>" +
                         "</div>";
