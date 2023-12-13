@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 let innerHTML = '';
 
                 slicedArray.forEach(element => {
+                    
                     innerHTML += "<div>" +
                         "<img src='" + element.image + "' width='70' height='200' class='grid-item'>" +
                         "<p id='info'>" + element.name + "</p>" +
@@ -60,15 +61,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Hupplepuff
     hupplepuff.addEventListener('click', function(event) {
         event.preventDefault();
-        console.log('Button clicked - slytherin');
-        const apiEndpoint = 'https://hp-api.onrender.com/api/characters/house/hupplepuff';
+        console.log('Button clicked - hupplepuff');
+        const apiEndpoint = 'https://hp-api.onrender.com/api/characters/house/hufflepuff';
         fetchDataAndDisplay(apiEndpoint);
     });
 
     // Ravenclaw
     ravenclaw.addEventListener('click', function(event) {
         event.preventDefault();
-        console.log('Button clicked - slytherin');
+        console.log('Button clicked - Ravenclaw');
         const apiEndpoint = 'https://hp-api.onrender.com/api/characters/house/ravenclaw';
         fetchDataAndDisplay(apiEndpoint);
     });
