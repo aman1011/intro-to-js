@@ -1,13 +1,5 @@
-h2 {
-    color: lightsalmon;
-}
 
-h3 {
-    color: white;
-    font-size: xx-large;
-    text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
+
 
 #big-text {
     font-size: 120%;
@@ -15,27 +7,6 @@ h3 {
     color: red;
 }
 
-#education {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color:cadetblue;
-    text-align: left;
-}
-
-#hobbies {
-    color: darkorchid;
-    text-align: left;
-    background: rgb(221,128,114);
-background: linear-gradient(90deg, rgba(221,128,114,1) 0%, rgba(52,11,38,1) 50%, rgba(1,0,0,1) 100%);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-#formula {
-    color: #cc3232;
-    background: rgb(0,0,5);
-    background: linear-gradient(90deg, rgba(0,0,5,1) 0%, rgba(11,51,52,1) 50%, rgba(0,1,1,1) 100%);
-    text-align: left;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
 
 
 .center {
@@ -44,28 +15,17 @@ background: linear-gradient(90deg, rgba(221,128,114,1) 0%, rgba(52,11,38,1) 50%,
     margin-right: auto;
 }
 
-#above {
+#info {
+    color: maroon;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color:cadetblue;
-    text-align: left;
-}
-
-#below {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color:black;
-    text-align: left;
-}
-
-#bh {
-    color: lightsalmon;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0%;
 }
 
 .grid-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
     justify-content: flex-start;
 }
 
@@ -78,23 +38,13 @@ background: linear-gradient(90deg, rgba(221,128,114,1) 0%, rgba(52,11,38,1) 50%,
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 10px;
-    padding: 20px;
+    padding: 10px;
 }
   
 .grid-item {
     width: 100%;
     height: 90%;
     display: block;
-}
-
-.image-grid img:nth-child(1) {
-    grid-row: 2; 
-    grid-column: 2; 
-}
-
-.image-grid img:nth-child(3) {
-    grid-row: 2; 
-    grid-column: 1;
 }
 
 .flip-container {
@@ -133,10 +83,10 @@ background: linear-gradient(90deg, rgba(221,128,114,1) 0%, rgba(52,11,38,1) 50%,
   }
   
 .grid-button {
-    padding: 10px 20px; /* Adjust the values based on your preferred padding */
-    background-color: white /* Green background color */
-    color: white; /* White text color */
-    border: none; /* Remove default button border */
-    border-radius: 5px; /* Optional: Add rounded corners */
+    padding: 10px 20px; 
+    background-color: white; 
+    color: white; 
+    border: none; 
+    border-radius: 5px;
     cursor: pointer;
 }

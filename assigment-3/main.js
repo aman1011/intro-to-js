@@ -1,30 +1,76 @@
 document.addEventListener('DOMContentLoaded', function() {
     const gryffindor = document.getElementById('gryffindor');
+    const slytherin = document.getElementById('slytherin');
+    const hupplepuff = document.getElementById('hupplepuff');
+    const ravenclaw = document.getElementById('ravenclaw');
     const dataContainer = document.getElementById('dataContainer');
 
-    gryffindor.addEventListener('click', function() {
-        // Replace 'YOUR_API_ENDPOINT' with the actual API endpoint
-        const apiEndpoint = 'https://hp-api.onrender.com/api/characters/house/gryffindor';
-
-        // Fetch data from the API
+    function fetchDataAndDisplay(apiEndpoint) {
+        dataContainer.innerHTML = '';
         fetch(apiEndpoint)
             .then(response => response.json())
             .then(data => {
-                // Display the fetched data at the bottom of the page
                 const newDataElement = document.createElement('div');
-                console.log(data[0]);
-                newDataElement.innerHTML = `<p>Top students from Gryffindor:</p>
-                                            <pre>${JSON.stringify(data, null, 2)}</pre>`;
+                const slicedArray = data.slice(0, 5);
 
-                // Append the new data element to the container
+                const upperHTML = "<div class='grid-container'>" +
+                    "<div class='image-grid'>";
+                let innerHTML = '';
+
+                slicedArray.forEach(element => {
+                    innerHTML += "<div>" +
+                        "<img src='" + element.image + "' width='70' height='200' class='grid-item'>" +
+                        "<p id='info'>" + element.name + "</p>" +
+                        "<p id='info'> Wand :-" + element.wand['length'] + '" ' + element.wand['wood'] + element.wand['core'] + "</p>" +
+                        "</div>";
+                });
+
+                const lowerHTML = "</div>" +
+                    "</div>";
+
+                const totalHTML = upperHTML + innerHTML + lowerHTML;
+
+                newDataElement.innerHTML = totalHTML;
                 dataContainer.appendChild(newDataElement);
             })
             .catch(error => {
                 console.error('Error fetching data:', error);
-                // Display an error message at the bottom of the page
                 const errorElement = document.createElement('div');
                 errorElement.innerHTML = '<p>Failed to fetch data from the API.</p>';
                 dataContainer.appendChild(errorElement);
             });
+    }
+
+    // Gryffindor
+    gryffindor.addEventListener('click', function(event) {
+        event.preventDefault();
+        console.log('Button clicked - Gryffindor');
+        const apiEndpoint = 'https://hp-api.onrender.com/api/characters/house/gryffindor';
+        fetchDataAndDisplay(apiEndpoint);
     });
+
+    // Slytherin
+    slytherin.addEventListener('click', function(event) {
+        event.preventDefault();
+        console.log('Button clicked - slytherin');
+        const apiEndpoint = 'https://hp-api.onrender.com/api/characters/house/slytherin';
+        fetchDataAndDisplay(apiEndpoint);
+    });
+
+    // Hupplepuff
+    hupplepuff.addEventListener('click', function(event) {
+        event.preventDefault();
+        console.log('Button clicked - slytherin');
+        const apiEndpoint = 'https://hp-api.onrender.com/api/characters/house/hupplepuff';
+        fetchDataAndDisplay(apiEndpoint);
+    });
+
+    // Ravenclaw
+    ravenclaw.addEventListener('click', function(event) {
+        event.preventDefault();
+        console.log('Button clicked - slytherin');
+        const apiEndpoint = 'https://hp-api.onrender.com/api/characters/house/ravenclaw';
+        fetchDataAndDisplay(apiEndpoint);
+    });
+
 });
